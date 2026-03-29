@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary-container": "#0f1a2e", 
+        "primary-container": "#0f1a2e",
         "on-tertiary": "#ffffff",
         "surface-variant": "#e8e3ce",
         "inverse-on-surface": "#f6f1dc",
@@ -32,7 +32,7 @@ const config: Config = {
         "surface-container-lowest": "#ffffff",
         "on-background": "#1d1c0f",
         "background": "#fffae4",
-        "primary": "#0f1a2e", 
+        "primary": "#0f1a2e",
         "tertiary-fixed": "#ffdbcf",
         "surface-bright": "#fffae4",
         "on-primary-fixed-variant": "#614000",
@@ -48,7 +48,7 @@ const config: Config = {
         "primary-fixed-dim": "#ffba41",
         "tertiary": "#000000",
         "on-error": "#ffffff",
-        "surface-tint": "#d4930a", 
+        "surface-tint": "#d4930a",
         "inverse-primary": "#ffba41",
         "on-surface": "#1d1c0f",
         "secondary-fixed-dim": "#afcfb1",
@@ -57,7 +57,7 @@ const config: Config = {
         "secondary-fixed": "#caebcc",
         "on-tertiary-fixed": "#390c00",
         "on-primary": "#ffffff",
-        
+
         "navy": "#0f1a2e",
         "paper": "#f2edd8",
         "amber": "#d4930a",
@@ -74,9 +74,9 @@ const config: Config = {
         "1.5": "1.5px"
       },
       borderRadius: {
-        "DEFAULT": "0px", 
-        "lg": "0px", 
-        "xl": "0px", 
+        "DEFAULT": "0px",
+        "lg": "0px",
+        "xl": "0px",
         "full": "9999px"
       },
     },

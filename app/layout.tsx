@@ -3,7 +3,7 @@ import { Lora, IBM_Plex_Mono, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { PremiumProvider } from "./contexts/PremiumContext";
 
-const lora = Lora({ 
+const lora = Lora({
   subsets: ["latin"],
   variable: "--font-lora",
   display: "swap",

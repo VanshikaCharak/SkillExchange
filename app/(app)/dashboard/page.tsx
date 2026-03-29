@@ -60,7 +60,7 @@ export default function DashboardPage() {
                 <h3 className="font-label uppercase tracking-widest text-xs font-bold text-on-surface">Skill Acquisition Ledger</h3>
                 <span className="font-label text-[10px] text-outline">v2.4 Finalized</span>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="grid grid-cols-4 items-center gap-4">
                   <span className="font-label text-xs uppercase text-on-surface-variant col-span-1">Skills Learning</span>
@@ -69,7 +69,7 @@ export default function DashboardPage() {
                   </div>
                   <span className="font-label text-xs text-right text-surface-tint">85%</span>
                 </div>
-                
+
                 <div className="grid grid-cols-4 items-center gap-4">
                   <span className="font-label text-xs uppercase text-on-surface-variant col-span-1">Skills Teaching</span>
                   <div className="col-span-2 bg-[#f2edd8] h-[3px] w-full relative">
@@ -77,7 +77,7 @@ export default function DashboardPage() {
                   </div>
                   <span className="font-label text-xs text-right text-surface-tint">42%</span>
                 </div>
-                
+
                 <div className="grid grid-cols-4 items-center gap-4">
                   <span className="font-label text-xs uppercase text-on-surface-variant col-span-1">Connections Made</span>
                   <div className="col-span-2 bg-[#f2edd8] h-[3px] w-full relative">
@@ -85,7 +85,7 @@ export default function DashboardPage() {
                   </div>
                   <span className="font-label text-xs text-right text-surface-tint">71%</span>
                 </div>
-                
+
                 <div className="grid grid-cols-4 items-center gap-4">
                   <span className="font-label text-xs uppercase text-on-surface-variant col-span-1">Resources Saved</span>
                   <div className="col-span-2 bg-[#f2edd8] h-[3px] w-full relative">
@@ -94,7 +94,7 @@ export default function DashboardPage() {
                   <span className="font-label text-xs text-right text-surface-tint">94%</span>
                 </div>
               </div>
-              
+
               <div className="mt-8 flex justify-end">
                 <button onClick={() => setShowExportModal(true)} className="bg-[#d4930a] text-white border-[1.5px] border-primary px-6 py-2 font-label uppercase text-xs tracking-widest shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
                   Export Log
@@ -108,7 +108,7 @@ export default function DashboardPage() {
                 <h3 className="font-label uppercase tracking-widest text-xs font-bold text-on-surface">My Schedule</h3>
                 <span className="font-label text-[10px] text-outline">Active Deployments</span>
               </div>
-              
+
               <div className="space-y-1">
                 {/* Table Header */}
                 <div className="grid grid-cols-12 gap-2 border-b border-outline-variant pb-2 mb-4">
@@ -117,7 +117,7 @@ export default function DashboardPage() {
                   <div className="col-span-4 font-label text-[10px] uppercase text-outline">Topic/Module</div>
                   <div className="col-span-2 text-right font-label text-[10px] uppercase text-outline">Status</div>
                 </div>
-                
+
                 {/* Session 1 */}
                 <div className="grid grid-cols-12 gap-2 items-center py-3 border-b border-dotted border-outline-variant group hover:bg-surface-container-low transition-colors">
                   <div className="col-span-3">
@@ -134,7 +134,7 @@ export default function DashboardPage() {
                     <span className="font-label text-[9px] px-1.5 py-0.5 border border-primary text-primary uppercase">Scheduled</span>
                   </div>
                 </div>
-                
+
                 {/* Session 2 */}
                 <div className="grid grid-cols-12 gap-2 items-center py-3 border-b border-dotted border-outline-variant group hover:bg-surface-container-low transition-colors">
                   <div className="col-span-3">
@@ -151,7 +151,7 @@ export default function DashboardPage() {
                     <span className="font-label text-[9px] px-1.5 py-0.5 border border-primary text-primary uppercase">Confirmed</span>
                   </div>
                 </div>
-                
+
                 {/* Session 3 */}
                 <div className="grid grid-cols-12 gap-2 items-center py-3 border-b border-dotted border-outline-variant group hover:bg-surface-container-low transition-colors">
                   <div className="col-span-3">
@@ -169,7 +169,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-8 flex justify-between items-center">
                 <p className="font-label text-[10px] text-outline italic">* All times are in local system timezone.</p>
                 <button onClick={() => setShowBookingModal(true)} className="bg-[#0f1a2e] text-[#fffae4] border-[1.5px] border-primary px-6 py-2 font-label uppercase text-xs tracking-widest shadow-[3px_3px_0px_0px_#d4930a] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">
@@ -288,7 +288,7 @@ export default function DashboardPage() {
             <button onClick={() => setShowBookingModal(false)} className="absolute top-4 right-4 text-outline hover:text-error transition-colors material-symbols-outlined">close</button>
             <h3 className="font-serif italic text-3xl text-primary mb-2">Schedule Alignment</h3>
             <p className="font-body text-sm text-on-surface-variant mb-6">Book a 1-on-1 peer exchange session.</p>
-            
+
             <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); setShowBookingModal(false); }}>
               <div className="flex flex-col">
                 <label className="font-mono text-[10px] uppercase text-outline mb-1">Select Topic Focus</label>
@@ -320,9 +320,9 @@ export default function DashboardPage() {
           <div className="bg-surface border-[1.5px] border-primary max-w-2xl w-full p-0 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative flex flex-col md:flex-row animate-in fade-in zoom-in duration-200">
             <div className="bg-primary p-8 text-white w-full md:w-1/3 flex flex-col justify-between">
               <div>
-                 <span className="material-symbols-outlined text-4xl mb-4 text-[#d4930a]">psychology</span>
-                 <h3 className="font-serif italic text-2xl mb-2">Analysis</h3>
-                 <p className="font-mono text-[10px] text-[#fffae4]/70 uppercase tracking-widest">Confidence: 94%</p>
+                <span className="material-symbols-outlined text-4xl mb-4 text-[#d4930a]">psychology</span>
+                <h3 className="font-serif italic text-2xl mb-2">Analysis</h3>
+                <p className="font-mono text-[10px] text-[#fffae4]/70 uppercase tracking-widest">Confidence: 94%</p>
               </div>
             </div>
             <div className="p-8 w-full md:w-2/3 relative">
@@ -332,12 +332,12 @@ export default function DashboardPage() {
                 The node "Sarah" exhibits a high topological overlap with your current learning path. Sarah has mastered Python Fundamentals, which you requested, and is actively seeking assistance with User Experience Design principles—a skillset you are deeply proficient in.
               </p>
               <div className="bg-surface-container border-[1.5px] border-outline-variant p-4 space-y-3 mb-8">
-                 <div className="flex justify-between items-center border-b border-outline-variant pb-2"><span className="font-mono text-[10px] text-outline uppercase tracking-widest">Skill Swap</span><span className="font-mono text-[10px] text-primary bg-[#d4930a]/20 border border-[#d4930a] px-2 py-0.5">SYNERGY DETECTED</span></div>
-                 <div className="flex justify-between items-center"><span className="font-mono text-[10px] text-outline uppercase tracking-widest">Schedule Check</span><span className="font-mono text-[10px] text-primary font-bold">OVERLAP: WEEKENDS</span></div>
+                <div className="flex justify-between items-center border-b border-outline-variant pb-2"><span className="font-mono text-[10px] text-outline uppercase tracking-widest">Skill Swap</span><span className="font-mono text-[10px] text-primary bg-[#d4930a]/20 border border-[#d4930a] px-2 py-0.5">SYNERGY DETECTED</span></div>
+                <div className="flex justify-between items-center"><span className="font-mono text-[10px] text-outline uppercase tracking-widest">Schedule Check</span><span className="font-mono text-[10px] text-primary font-bold">OVERLAP: WEEKENDS</span></div>
               </div>
               <div className="flex justify-end gap-6 items-center">
-                 <button onClick={() => setShowAnalysisModal(false)} className="font-mono text-xs uppercase tracking-widest text-outline hover:text-error transition-colors">Dismiss</button>
-                 <Link href="/peer-matching" className="bg-[#0f1a2e] text-[#fffae4] border-[1.5px] border-primary px-6 py-3 font-mono text-xs uppercase tracking-widest shadow-[3px_3px_0px_0px_#d4930a] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">Proceed to Match</Link>
+                <button onClick={() => setShowAnalysisModal(false)} className="font-mono text-xs uppercase tracking-widest text-outline hover:text-error transition-colors">Dismiss</button>
+                <Link href="/peer-matching" className="bg-[#0f1a2e] text-[#fffae4] border-[1.5px] border-primary px-6 py-3 font-mono text-xs uppercase tracking-widest shadow-[3px_3px_0px_0px_#d4930a] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">Proceed to Match</Link>
               </div>
             </div>
           </div>
@@ -353,7 +353,7 @@ export default function DashboardPage() {
               <h3 className="font-serif italic text-3xl text-primary">Identity</h3>
               <button onClick={() => setShowProfileDrawer(false)} className="material-symbols-outlined text-outline hover:text-error transition-colors">close</button>
             </div>
-            
+
             <div className="flex flex-col items-center mb-10">
               <div className="w-32 h-32 bg-surface-tint border-[1.5px] border-primary mb-4 p-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxII8VxKpQ5kiMIcXzJLXYGIqVEf1NGlNR93uBo_uyHcUXdJJD0EwuivI6mKXpICu7N7Phby3nfagfRBDjmpSYtZGT8j99R8hV_9S17gkauREulJGgAr-I6UwTWyCtthixby4ZCL5qBgBBI24nsZ8IYtpcG70ylxpwQAJU9NXdN-KxZzoeYhzIOSH8pjt1_iyeYAuuVhWEk6jdZzIFQUE2TRHHY3SHn6e722ogbtq1g6QeuYPV0nn7GGFIpP08FleA_KIY-0fMOv2l" alt="Profile" className="w-full h-full object-cover grayscale" />
@@ -369,19 +369,19 @@ export default function DashboardPage() {
 
             <div className="space-y-6 flex-1 bg-surface-container-low border-[1.5px] border-outline-variant p-6">
               <div>
-                 <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Network ID</span>
-                 <p className="font-mono text-sm text-on-surface">PF-8802-AC</p>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Network ID</span>
+                <p className="font-mono text-sm text-on-surface">PF-8802-AC</p>
               </div>
               <div>
-                 <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Primary Focus</span>
-                 <p className="font-mono text-sm text-on-surface">Distributed Systems Engineering</p>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Primary Focus</span>
+                <p className="font-mono text-sm text-on-surface">Distributed Systems Engineering</p>
               </div>
               <div>
-                 <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Current Status</span>
-                 <div className="flex items-center gap-2 mt-1">
-                    <span className="w-2 h-2 bg-secondary animate-pulse rounded-full"></span>
-                    <p className="font-mono text-[10px] text-[#4e6b52] font-bold uppercase tracking-widest">Available for Peer Exchange</p>
-                 </div>
+                <span className="font-mono text-[9px] uppercase tracking-widest text-[#d4930a] font-bold block mb-1">Current Status</span>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="w-2 h-2 bg-secondary animate-pulse rounded-full"></span>
+                  <p className="font-mono text-[10px] text-[#4e6b52] font-bold uppercase tracking-widest">Available for Peer Exchange</p>
+                </div>
               </div>
             </div>
 
