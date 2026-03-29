@@ -1,12 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { usePremium } from "../contexts/PremiumContext";
+import { useAuth } from "../hooks";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
   const { isPremium, openUpgradeModal } = usePremium();
+  const { user, logout } = useAuth();
+
+  const handleLogout = async () => {
+    await logout();
+    router.push("/login");
+  };
 
   const isMatched = (path: string) => {
     return pathname === path || pathname?.startsWith(path + '/');
@@ -89,11 +97,15 @@ export default function Sidebar() {
 
         <div className="mt-8 flex flex-col p-3 bg-white/5 border border-white/10 shadow-[2px_2px_0px_0px_black]">
           <div className="flex items-center gap-3">
-            <img alt="Student Portrait" className="w-8 h-8 bg-surface-tint" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxII8VxKpQ5kiMIcXzJLXYGIqVEf1NGlNR93uBo_uyHcUXdJJD0EwuivI6mKXpICu7N7Phby3nfagfRBDjmpSYtZGT8j99R8hV_9S17gkauREulJGgAr-I6UwTWyCtthixby4ZCL5qBgBBI24nsZ8IYtpcG70ylxpwQAJU9NXdN-KxZzoeYhzIOSH8pjt1_iyeYAuuVhWEk6jdZzIFQUE2TRHHY3SHn6e722ogbtq1g6QeuYPV0nn7GGFIpP08FleA_KIY-0fMOv2l" />
+            <div className="w-8 h-8 bg-surface-tint flex items-center justify-center">
+              <span className="font-serif text-sm font-bold text-[#0f1a2e]">
+                {user?.email?.[0]?.toUpperCase() ?? "U"}
+              </span>
+            </div>
             <div>
               <p className="text-[10px] font-mono text-[#fffae4]/50">LOGGED AS</p>
               <p className="text-xs font-bold text-[#fffae4] flex items-center gap-2">
-                ALEX_VANCE
+                {user?.email?.split("@")[0]?.toUpperCase() ?? "USER"}
                 {isPremium && (
                   <span className="font-mono text-[9px] uppercase tracking-widest bg-[#d4930a] text-[#0f1a2e] px-1.5 py-0.5 border border-[#d4930a] shadow-[1px_1px_0px_0px_rgba(255,255,255,0.2)]">PRO</span>
                 )}
@@ -114,20 +126,17 @@ export default function Sidebar() {
               </button>
             )}
           </div>
+
+          {/* LOGOUT */}
+          <button
+            onClick={handleLogout}
+            className="mt-3 pt-3 border-t border-[#fffae4]/10 w-full flex items-center gap-2 font-mono text-[10px] uppercase tracking-widest text-[#fffae4]/50 hover:text-red-400 transition-colors text-left"
+          >
+            <span className="material-symbols-outlined text-[14px]">logout</span>
+            Sign Out
+          </button>
         </div>
       </div>
     </aside>
   );
 }
-import { useAuth } from '../hooks'
-
-// Inside the component:
-const { logout } = useAuth()
-
-// Add this button at the bottom of the sidebar where it shows "LOGGED AS":
-<button
-  onClick={async () => { await logout(); router.push('/login') }}
-  className="w-full font-mono text-[10px] uppercase tracking-widest text-[#75777d] hover:text-red-500 hover:bg-red-50 px-4 py-2 text-left border-t border-[#75777d]/20 transition-colors"
->
-  → Sign Out
-</button>
