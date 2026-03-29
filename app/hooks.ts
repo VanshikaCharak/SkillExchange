@@ -10,12 +10,7 @@ import {
   signIn, signUp, signOut, getCurrentUser, onAuthChange,
   getProfile, updateProfile,
 } from './api'    // ← fixed: was '../lib/api'
-import {
-  getAllSkills, getSkillsByCategory,
-  getUserSkills, addUserSkill, removeUserSkill, updateSkillLevel,
-  getGroupSkills, addGroupSkill, removeGroupSkill,
-  getMyMatches, findTeachersForSkill, getRecommendedGroups,
-} from './skills-api'    // ← fixed: was '../lib/skills-api'
+    // ← fixed: was '../lib/skills-api'
 
 // ─── AUTH ─────────────────────────────────────────────────────────────────────
 
