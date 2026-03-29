@@ -267,3 +267,8 @@ export async function getGroupActivity(groupId: string, limit = 20) {
   if (error) throw error
   return data
 }
+export function onAuthChange(callback: (user: any) => void) {
+  return supabase.auth.onAuthStateChange((_event, session) => {
+    callback(session?.user ?? null)
+  })
+}
