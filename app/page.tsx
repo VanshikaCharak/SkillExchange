@@ -38,7 +38,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div>
-                <Link href="/dashboard" className="inline-block bg-[#d4930a] text-white font-label font-bold uppercase tracking-widest px-10 py-5 border-1.5 border-black hard-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-sm">
+                <Link href="/login" className="inline-block bg-[#d4930a] text-white font-label font-bold uppercase tracking-widest px-10 py-5 border-1.5 border-black hard-shadow hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none text-sm">
                   BEGIN EXPEDITION
                 </Link>
               </div>
