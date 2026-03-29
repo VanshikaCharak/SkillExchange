@@ -119,3 +119,15 @@ export default function Sidebar() {
     </aside>
   );
 }
+import { useAuth } from '../hooks'
+
+// Inside the component:
+const { logout } = useAuth()
+
+// Add this button at the bottom of the sidebar where it shows "LOGGED AS":
+<button
+  onClick={async () => { await logout(); router.push('/login') }}
+  className="w-full font-mono text-[10px] uppercase tracking-widest text-[#75777d] hover:text-red-500 hover:bg-red-50 px-4 py-2 text-left border-t border-[#75777d]/20 transition-colors"
+>
+  → Sign Out
+</button>
