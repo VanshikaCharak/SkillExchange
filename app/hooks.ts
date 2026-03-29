@@ -105,7 +105,7 @@ export function useMembership(groupId: string, userId: string | null, initialMem
       if (payload.eventType === 'INSERT') setMemberCount(c => c + 1)
       if (payload.eventType === 'DELETE') setMemberCount(c => Math.max(0, c - 1))
     })
-    return unsub
+    return () => { unsub() }
   }, [groupId])
 
   const join = useCallback(async () => {
@@ -147,10 +147,8 @@ export function useGroupMembers(groupId: string) {
     const unsub = subscribeToMembers(groupId, () => {
       getGroupMembers(groupId).then(setMembers)
     })
-    return unsub
+    return () => { unsub() }
   }, [groupId])
-
-  return { members, loading }
 }
 
 // ─── MESSAGES ─────────────────────────────────────────────────────────────────
@@ -167,7 +165,7 @@ export function useMessages(groupId: string) {
     const unsub = subscribeToMessages(groupId, (msg: any) => {
       setMessages(prev => [...prev, msg])
     })
-    return unsub
+    return () => { unsub() }
   }, [groupId])
 
   const send = useCallback(async (content: string) => {
