@@ -2,7 +2,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // SKILLEX — Skills API
 // ─────────────────────────────────────────────────────────────────────────────
-import { supabase } from './lib/supabase'   // ← fixed: was './supabase'
+import { supabase } from './supabase'   // ← fixed: was './supabase'
 
 // ─── SKILLS MASTER LIST ───────────────────────────────────────────────────────
 
